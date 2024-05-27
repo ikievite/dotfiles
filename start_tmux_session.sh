@@ -15,5 +15,10 @@ tmux split-window -h -t "$session_name"
 tmux split-window -v -t "$session_name"
 tmux send-keys -t "$session_name" "top" Enter
 
+tmux select-pane -t 0
+tmux split-window -v -t "$session_name"
+
+tmux select-pane -t 0
+
 tmux select-window -t "$session_name:1"
 tmux -2 attach-session -t "$session_name"
